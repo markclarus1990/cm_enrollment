@@ -6,6 +6,22 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please add a name'],
     },
+    lname: {
+      type: String,
+      required: [true, 'Please add an lname'],
+    },
+    age: {
+      type: String,
+      required: [true, 'Please add an age'],
+    },
+    cp: {
+      type: String,
+      required: [true, 'Please add a contact number'],
+    },
+    address: {
+      type: String,
+      required: [true, 'Please add an address'],
+    },
     email: {
       type: String,
       required: [true, 'Please add an email'],

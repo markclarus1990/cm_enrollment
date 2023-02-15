@@ -9,12 +9,16 @@ import Spinner from '../components/Spinner'
 function Register() {
   const [formData, setFormData] = useState({
     name: '',
+    lname:'',
+    age:'',
+    cp:'',
+    address:'',
     email: '',
     password: '',
     password2: '',
   })
 
-  const { name, email, password, password2 } = formData
+  const { name, lname,age,cp,address,email, password, password2 } = formData
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -50,7 +54,11 @@ function Register() {
     } else {
       const userData = {
         name,
+        lname,
         email,
+        age,
+        cp,
+        address,
         password,
       }
 
@@ -80,7 +88,51 @@ function Register() {
               id='name'
               name='name'
               value={name}
-              placeholder='Enter your name'
+              placeholder='Enter your first name'
+              onChange={onChange}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control'
+              id='lname'
+              name='lname'
+              value={lname}
+              placeholder='Enter your last name'
+              onChange={onChange}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control'
+              id='age'
+              name='age'
+              value={age}
+              placeholder='Enter your age'
+              onChange={onChange}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control'
+              id='cp'
+              name='cp'
+              value={cp}
+              placeholder='Enter your contact number'
+              onChange={onChange}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control'
+              id='address'
+              name='address'
+              value={address}
+              placeholder='Enter your address'
               onChange={onChange}
             />
           </div>

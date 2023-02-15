@@ -38,8 +38,17 @@ function Dashboard() {
   return (
     <>
       <section className='heading'>
-        <h1>Welcome {user && user.name}</h1>
-        <p>Goals Dashboard</p>
+        <h1>Welcome</h1>
+        <h1>{user && user.name}</h1>
+        <p>Student Information</p>
+         <div className="form-group">
+        <span><label htmlFor="">Last Name:</label><input type="text" value={user && user.lname} /></span>
+        <span><label htmlFor="">Age:</label><input type="text" value={user && user.age} /></span>
+        <span><label htmlFor="">Contact:</label><input type="text" value={user && user.cp} /></span>
+        <span><label htmlFor="">Address:</label><input type="text" value={user && user.address} /></span>
+        </div>
+        
+       
       </section>
 
       <GoalForm />
@@ -52,7 +61,7 @@ function Dashboard() {
             ))}
           </div>
         ) : (
-          <h3>You have not set any goals</h3>
+          <h3>You are not enrolled to any subject</h3>
         )}
       </section>
     </>
