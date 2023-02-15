@@ -1,5 +1,5 @@
 {
-  "name": "CM_enrollment",
+  "name": "cm_enrollment",
   "version": "1.0.0",
   "description": "The College of Maasin Enrollment System",
   "main": "server.js",
